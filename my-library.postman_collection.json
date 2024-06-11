@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "e15bf2a0-0a77-4903-aea3-0061314b9a9e",
+		"name": "my-library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30246442"
+	},
+	"item": [
+		{
+			"name": "getAllBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"all"
+					]
+				},
+				"description": "Get a list of all books in the library"
+			},
+			"response": []
+		},
+		{
+			"name": "registerBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\":\"abc-123\",\r\n    \"title\":\"my book title\",\r\n    \"author\":\"my author\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				},
+				"description": "Register a new book to the library"
+			},
+			"response": []
+		},
+		{
+			"name": "registerBorrower",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"my name\",\r\n    \"email\":\"abc@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/borrower",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"borrower"
+					]
+				},
+				"description": "Register a new borrower to the library"
+			},
+			"response": []
+		},
+		{
+			"name": "borrowBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\":\"5795e203-2e3d-4932-a829-181003fef45d\",\r\n    \"borrowerId\":\"94fef0f9-281f-11ef-929a-0242ac1c0002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/library/borrow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"borrow"
+					]
+				},
+				"description": "Borrow a book with a particular book id"
+			},
+			"response": []
+		},
+		{
+			"name": "returnBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\":\"43151b24-2823-11ef-a743-0242ac1d0002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/library/return",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"return"
+					]
+				},
+				"description": "Return a borrowed book"
+			},
+			"response": []
+		}
+	]
+}
